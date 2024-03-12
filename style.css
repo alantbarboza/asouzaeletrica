@@ -1,0 +1,100 @@
+body {
+  background-color: #E8EFF2;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  text-align: justify;
+}
+
+.footer {
+  text-align: center;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  margin-left: 40px;
+}
+
+.IconRedeSocial {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.conteudo {
+  background-color: #fff;
+  padding: 2em 4em;
+  text-align: center;
+  min-height: 80vh;
+}
+
+.formulario {
+  max-width: 500px;
+  margin: 0 auto;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(110, 110, 110, 0.5);
+}
+
+.formulario textarea {
+  width: 100%;
+  max-width: 100%;
+  height: 100px;
+  resize: none;
+}
+
+header {
+  background-color: #014E77;
+  color: #ffffff;
+  padding: 10px;
+  display: flex;
+  align-items: center; 
+}
+
+nav {
+  text-align: center;
+  flex-grow: 1; 
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  background: none;
+  color: #fff;
+}
+
+.navbar-nav .nav-link {
+  text-decoration: none;
+  background: none;
+  color: #fff;
+}
+
+footer {
+  background-color: #014E77;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  background: none;
+  transition-duration: 0.3s;
+  -webkit-text-decoration-skip: objects;
+  color: #fff;
+}
+

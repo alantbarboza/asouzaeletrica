@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A.Souza Elétrica</title>
+  <link rel="icon" href="./imagens/icon.ico" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+      <header>
+          <nav class="navbar navbar-expand-lg navbar-blue bg-blue">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">
+                <img src="imagens/logo.png" alt="Logo da A.Souza Elétrica" class="logo">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="navbar-collapse collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="./index.html">PÁGINA INICIAL</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./sobre.html">SOBRE</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./projeto.html">PROJETOS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./contato.html">CONTATO</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="redes-sociais">
+                <a href="https://www.facebook.com/a.souzaeletrica" target="_blank"><img src="imagens/facebook.png" alt="Facebook" title="Facebook" class="IconRedeSocial"></a>
+                <a href="https://www.instagram.com/a.souzaeletrica/" target="_blank"><img src="imagens/instagram.png" alt="Instagram"  title="Instagram" class="IconRedeSocial"></a>
+                <a href="https://wa.me/5511947781974?text=Olá!%20vim%20pelo%20site" target="_blank"><img src="imagens/whatsapp.png" alt="whatsapp"  title="Whatsapp" class="IconRedeSocial"></a>
+                <a href="mailto:alexandredesouzabarboza@gmail.com" target="_blank"><img src="imagens/email.png" alt="email"  title="Email" class="IconRedeSocial"></a>
+              </div>
+            </div>
+          </nav>
+      </header>
+    <div class="conteudo">
+      <h2 style="color: rgb(0, 0, 0); padding-bottom: 35px;">SOBRE</h2>
+      <div class="row text-center" style="margin: 1px">
+        <p>A.Souza Elétrica é uma empresa especializada em serviços de manutenção e instalação elétrica, 
+          atendendo a uma ampla gama de necessidades. Nosso foco abrange desde sistemas de segurança, 
+          como câmeras, alarmes e cerca elétrica, até atendimento especializado para prédios, comércios 
+          e residências. Atuamos no mercado desde 2013, proporcionando soluções elétricas confiáveis e 
+          eficientes para nossos clientes.</p>
+          <p>O Alexandre de Souza Barboza é o responsável pela A.Souza Elétrica. 
+            Com uma sólida experiência desde 2011, Alexandre é um Eletricista residencial, comercial e industrial qualificado, 
+            destacando-se pela formação em NR 35 e NR 10. Sua dedicação e conhecimento 
+            fazem da A.Souza Elétrica a escolha confiável para suas necessidades elétricas.</p>
+      </div>
+    </div>
+    <footer>
+      <p class="footer">&copy; <span id="ano"></span> A.Souza Elétrica - Todos os direitos reservados.</p>
+    </footer>
+  </div>
+
+  <script>
+    let anoAtual = new Date().getFullYear();
+    document.querySelector('#ano').textContent = anoAtual;
+  </script>
+</body>
+</html>
