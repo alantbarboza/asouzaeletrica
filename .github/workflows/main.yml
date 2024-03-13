@@ -23,8 +23,8 @@ jobs:
 
       - name: Build JavaScript file
         run: |
-          echo "const apiToken = '${{ secrets.API_TOKEN }}';" > feed.js
-
+            echo "const apiToken = '${{ secrets.API_TOKEN }}';" > feed.js
+            
       - name: Commit changes
         run: |
           git config --global user.name 'GitHub Actions'
