@@ -1,4 +1,4 @@
-name: Build JavaScript file with API token
+name: Executar 
 
 on:
   push:
@@ -10,25 +10,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+    - name: Checkout do repositório
+      uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
+    - name: Configuração do Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
 
-      - name: Install dependencies
-        run: npm install
+    - name: Instalar dependências
+      run: npm install
 
-      - name: Build JavaScript file
-        run: |
-            echo "const apiToken = '${{ secrets.API_TOKEN }}';" > feed.js
-            
-      - name: Commit changes
-        run: |
-          git config --global user.name 'GitHub Actions'
-          git config --global user.email 'actions@github.com'
-          git add .
-          git commit -m "Add API token to feed.js"
-          git push
+    - name: Executar script feed.js
+      run: node feed.js
+      env:
+        API_TOKEN: ${{ secrets.API_TOKEN }}
