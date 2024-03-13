@@ -1,5 +1,3 @@
-const $ = require('jquery');
-
 $(function(){
     const token = process.env.API_TOKEN
     const url = "https://graph.instagram.com/me/media?access_token=" + token + "&fields=media_url,media_type,caption,permalink";
