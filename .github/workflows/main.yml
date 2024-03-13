@@ -4,7 +4,7 @@ on: [push]
 
 env:
   CI: true
-  API_KEY: ${{ secrets.API_KEY }}
+  API_KEY: ${{ secrets.API_TOKEN }}
 
 jobs:
   build:
