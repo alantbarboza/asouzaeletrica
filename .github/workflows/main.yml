@@ -16,4 +16,20 @@ jobs:
     - name: Create env file
       run: |
         touch .env
+        echo "API_TOKEN=SEU_TOKEN_AQUI" >> .env
         echo "ENGINE_API_KEY=${{ secrets.API_TOKEN }}" >> .env
+        
+    - name: Run JavaScript code
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+        
+    - name: Read .env file
+      id: env
+      run: echo "::set-output name=env::$(cat .env)"
+      
+    - name: Run JavaScript code
+      run: |
+        echo "$env" > .env
+        npm install
+        node script.js
