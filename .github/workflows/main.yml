@@ -13,6 +13,6 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Executar Script
-        run: node script.js
+        run: node feed.js
         env:
           API_TOKEN: ${{ secrets.API_TOKEN }}
