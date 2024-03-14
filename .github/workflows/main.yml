@@ -1,15 +1,19 @@
-name: "Meu Workflow"
+name: create env file
 
-on: [push]
-
-env:
-  CI: true
-  API_KEY: ${{ secrets.API_TOKEN }}
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    
     steps:
-      - uses: actions/checkout@v2
-
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Create env file
+      run: |
+        touch .env
+        echo "ENGINE_API_KEY=${{ secrets.API_TOKEN }}" >> .env
