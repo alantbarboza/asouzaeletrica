@@ -15,3 +15,8 @@ jobs:
 
     - name: Set API Token
       run: echo "API_TOKEN=${{ secrets.API_TOKEN }}" >> $GITHUB_ENV
+
+    - name: Substitute API Token in JavaScript
+      run: sed -i "s/\${{ secrets.API_TOKEN }}/${{ secrets.API_TOKEN }}/g" feed.js
+
+   
