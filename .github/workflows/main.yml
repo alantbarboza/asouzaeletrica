@@ -3,20 +3,21 @@ name: Deploy
 on:
   push:
     branches:
-      - main
+      - main  
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  deploy:
+    runs-on: ubuntu-latest  
+
+    env: 
+      API_TOKEN: ${{ secrets.API_TOKEN }} 
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+      - name: Checkout código
+        uses: actions/checkout@v2  
 
-    - name: Set API Token
-      run: echo "API_TOKEN=${{ secrets.API_TOKEN }}" >> $GITHUB_ENV
+      - name: Instalar dependências
+        run: yarn  
 
-    - name: Substitute API Token in JavaScript
-      run: sed -i "s/\${{ secrets.API_TOKEN }}/${{ secrets.API_TOKEN }}/g" feed.js
-
-   
+      - name: Executar testes
+        run: yarn test --coverage --watchAll=false  
