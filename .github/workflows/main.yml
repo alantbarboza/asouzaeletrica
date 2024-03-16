@@ -3,21 +3,24 @@ name: Deploy
 on:
   push:
     branches:
-      - main  
+      - main
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest  
+    runs-on: ubuntu-latest
 
     env: 
-      API_TOKEN: ${{ secrets.API_TOKEN }} 
+      API_TOKEN: ${{ secrets.API_TOKEN }}
 
     steps:
       - name: Checkout código
-        uses: actions/checkout@v2  
+        uses: actions/checkout@v2
+
+      - name: diretorio
+        run: cd asouzaeletrica
 
       - name: Instalar dependências
-        run: yarn  
+        run: yarn
 
       - name: Executar testes
-        run: yarn test --coverage --watchAll=false  
+        run: yarn test --coverage --watchAll=false
