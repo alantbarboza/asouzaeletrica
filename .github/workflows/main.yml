@@ -1,4 +1,4 @@
-name: Exemplo de Pipeline
+name: deploy
 
 on:
   push:
@@ -8,16 +8,21 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    
     steps:
-      - name: Checkout do repositório
-        uses: actions/checkout@v2
-
-      - name: Configurar ambiente
-        run: echo "Configurando ambiente..."
+    - name: Checkout do repositório
+      uses: actions/checkout@v2
       
-      - name: Executar comando de exemplo
-        env:
-          API_TOKEN: ${{ secrets.API_TOKEN }}
-        run: |
-          example-command "$API_TOKEN"
+    - name: Configurar Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+        
+    - name: Instalar dependências
+      run: npm install
+      
+    - name: Configurar variável de ambiente
+      run: echo "API_TOKEN=${{ secrets.API_TOKEN }}" >> $GITHUB_ENV
+      
+    - name: Executar script
+      run: node feed.js
