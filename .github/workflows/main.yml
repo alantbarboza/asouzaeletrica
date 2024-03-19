@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Criar diretório para secrets.dart
         run: mkdir -p lib/path/to/
-      - name: Decode base64 secrets and flutter pub get
+      - name: Decode base64 secrets 
         run: |
           echo $SECRETS_API_TOKEN | base64 -d > lib/path/to/secrets.dart
           export SECRETS_API_TOKEN=$SECRETS_API_TOKEN
