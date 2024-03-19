@@ -1,24 +1,23 @@
-name: CI
+name: Exemplo de Pipeline
 
 on:
   push:
-    branches: [ main, dev ]
-  pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
-  workflow_dispatch:
-  
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - name: Criar diretório para secrets.dart
-        run: mkdir -p lib/path/to/
-      - name: Decode base64 secrets 
-        run: |
-          echo $SECRETS_API_TOKEN | base64 -d > lib/path/to/secrets.dart
-          export SECRETS_API_TOKEN=$SECRETS_API_TOKEN
-          flutter pub get
+      - name: Checkout do repositório
+        uses: actions/checkout@v2
+
+      - name: Configurar ambiente
+        run: echo "Configurando ambiente..."
+      
+      - name: Executar comando de exemplo
         env:
-          SECRETS_API_TOKEN: ${{ secrets.SECRETS_API_TOKEN }}
+          API_TOKEN: ${{ secrets.API_TOKEN }}
+        run: |
+          example-command "$API_TOKEN"
