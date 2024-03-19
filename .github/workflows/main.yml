@@ -1,26 +1,19 @@
-name: Deploy
+name: CI
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main, dev ]
+  pull_request:
+    branches: [ main ]
 
+  workflow_dispatch:
+  
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-
-    env: 
-      API_TOKEN: ${{ secrets.API_TOKEN }}
-
     steps:
-      - name: Checkout código
-        uses: actions/checkout@v2
-
-      - name: diretorio
-        run: cd asouzaeletrica
-
-      - name: Instalar dependências
-        run: yarn
-
-      - name: Executar testes
-        run: yarn test --coverage --watchAll=false
+      - uses: actions/checkout@v2
+      - name: Decode base64 secrets
+        run: echo $SECRETS_API_TOKEN | base64 -d > lib/path/to/secrets.dart
+        env:
+          SECRETS_FILE_CONTENTS: ${{ secrets.SECRETS_API_TOKEN }}
