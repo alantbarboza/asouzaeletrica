@@ -21,6 +21,11 @@ jobs:
     - name: Instalar dependências
       run: npm install
       
+    - name: Baixar jQuery
+      run: |
+        mkdir -p assets
+        wget -O assets/jquery.min.js https://code.jquery.com/jquery-3.6.0.min.js
+      
     - name: Configurar variável de ambiente
       run: echo "API_TOKEN=${{ secrets.API_TOKEN }}" >> $GITHUB_ENV
       
