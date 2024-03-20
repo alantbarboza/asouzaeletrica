@@ -1,12 +1,10 @@
-let token; 
-let script = document.createElement('script');
-script.src = 'config.json';
-document.getElementsByTagName('head')[0].appendChild(script);
+import('config.json')
+  .then(module => {
+    const dados = module.default;
+    const token = dados.token;
+    console.log(token);
 
-script.onload = function() {
-    token = dados.token; 
-    console.log(dados.token)
-
+    // Restante do seu código aqui
     $(function(){
         const url = "https://graph.instagram.com/me/media?access_token=" + token + "&fields=media_url,media_type,caption,permalink";
 
@@ -47,4 +45,7 @@ script.onload = function() {
             $('#insta').html(conteudo);
         }
     });
-};
+  })
+  .catch(error => {
+    console.error('Erro ao carregar o arquivo JSON:', error);
+  });
