@@ -25,3 +25,10 @@ jobs:
       run: |
         sed -i "s/YOUR_API_TOKEN/${{ secrets.API_TOKEN }}/g" feed.js
         # Command to build and deploy your website
+
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@4.1.5
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages 
+        FOLDER: .
