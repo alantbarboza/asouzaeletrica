@@ -1,1 +1,16 @@
+name: job
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ex_job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Acessar a secret
+      env:
+        API_TOKEN: ${{ secrets.API_TOKEN }}
+      run: echo $API_TOKEN
 
