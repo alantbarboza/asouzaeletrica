@@ -5,6 +5,7 @@ document.getElementsByTagName('head')[0].appendChild(script);
 
 script.onload = function() {
     token = dados.token; 
+    console.log(dados.token)
 
     $(function(){
         const url = "https://graph.instagram.com/me/media?access_token=" + token + "&fields=media_url,media_type,caption,permalink";
