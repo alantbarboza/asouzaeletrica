@@ -8,6 +8,21 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="style.css">
+  <style>
+      @media (max-width: 767px) {
+        .conteudo {
+          padding: 0em;
+        }
+
+        iframe {
+          min-width: auto !important;
+        }
+      }
+
+      .hidden {
+        display: none;
+      }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -47,11 +62,18 @@
       </header>
     <div class="conteudo">
       <div class="row">
-          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-              <div id="insta">
-                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/a.souzaeletrica/" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:0;"> <div style="padding-top: 56.25%;"></div> <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"> <iframe src="//www.instagram.com/p/C4B9BGtJk82/embed/" frameborder="0" scrolling="no" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:none; overflow:hidden;" allowfullscreen></iframe> </div></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+          <blockquote class="instagram-media hidden" data-instgrm-permalink="https://www.instagram.com/a.souzaeletrica/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; padding:0; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+              <div style="padding:0;"> 
+                  <div style="padding-top: 56.25%;"></div> 
+                  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"> 
+                      <iframe src="//www.instagram.com/p/C4B9BGtJk82/embed/" frameborder="0" scrolling="no" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:none; overflow:hidden;" allowfullscreen></iframe> 
+                  </div>
               </div>
-          </div>
+          </blockquote> 
+          <script async src="//www.instagram.com/embed.js"></script>
+      </div>
+      
       </div>
       
     </div>
@@ -63,6 +85,10 @@
   <script>
     let anoAtual = new Date().getFullYear();
     document.querySelector('#ano').textContent = anoAtual;
+
+    function showBlockquote() {
+      document.querySelector('.instagram-media').classList.remove('hidden');
+    }
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
