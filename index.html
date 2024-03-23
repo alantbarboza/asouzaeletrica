@@ -158,10 +158,16 @@
     </footer>
   </div>
 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R0TPN7LR3Q"></script>
+  
   <script>
     let anoAtual = new Date().getFullYear();
     document.querySelector('#ano').textContent = anoAtual;
+    
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-R0TPN7LR3Q');
   </script>
-
 </body>
 </html>
