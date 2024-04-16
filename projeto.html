@@ -83,6 +83,8 @@
     </footer>
   </div>
 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R0TPN7LR3Q"></script>
+  
   <script>
     let anoAtual = new Date().getFullYear();
     document.querySelector('#ano').textContent = anoAtual;
@@ -90,7 +92,13 @@
     function showBlockquote() {
       document.querySelector('.instagram-media').classList.remove('hidden');
     }
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-R0TPN7LR3Q');
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </body>
 </html>
