@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A.Souza Elétrica é uma empresa especializada em serviços de manutenção e instalação elétrica, atendendo a uma ampla gama de necessidades. Saiba mais sobre nossa equipe e serviços aqui.">
-  <title>A.Souza Elétrica - Eletricista residencial, comercial e industrial</title>
-  <link rel="icon" href="./imagens/icon.ico" type="image/x-icon">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="style.css">
-  <style>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A.Souza Elétrica é uma empresa especializada em serviços de manutenção e instalação elétrica, atendendo a uma ampla gama de necessidades. Saiba mais sobre nossa equipe e serviços aqui.">
+    <title>A.Souza Elétrica - Eletricista residencial, comercial e industrial</title>
+    <link rel="icon" href="./imagens/icon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
       @media (max-width: 767px) {
         .conteudo {
           padding: 0em;
@@ -21,84 +21,100 @@
       }
 
       .hidden {
+        visibility: hidden;
+        border: none;
+        box-shadow: none;
         display: none;
       }
-  </style>
-</head>
-<body>
-  <div class="container">
+
+      .loading {
+        width: 150px;
+        height: 150px;
+      }
+
+      html, body {
+        overflow-x: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
       <header>
-          <nav class="navbar navbar-expand-lg navbar-blue bg-blue">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="index.html">
-                <img src="imagens/logo.png" alt="Logo da A.Souza Elétrica" class="logo">
-              </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="navbar-collapse collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link" href="./index.html">PÁGINA INICIAL</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./sobre.html">SOBRE</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./projeto.html">PROJETOS</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./contato.html">CONTATO</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="redes-sociais">
-                <a href="https://www.facebook.com/a.souzaeletrica" target="_blank"><img src="imagens/facebook.png" alt="Facebook" title="Facebook" class="IconRedeSocial"></a>
-                <a href="https://www.instagram.com/a.souzaeletrica/" target="_blank"><img src="imagens/instagram.png" alt="Instagram"  title="Instagram" class="IconRedeSocial"></a>
-                <a href="https://wa.me/5511947781974?text=Olá!%20vim%20pelo%20site" target="_blank"><img src="imagens/whatsapp.png" alt="whatsapp"  title="Whatsapp" class="IconRedeSocial"></a>
-                <a href="mailto:alexandredesouzabarboza@gmail.com" target="_blank"><img src="imagens/email.png" alt="email"  title="Email" class="IconRedeSocial"></a>
-              </div>
+        <nav class="navbar navbar-expand-lg navbar-blue bg-blue">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+              <img src="imagens/logo.png" alt="Logo da A.Souza Elétrica" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse justify-content-center" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="./index.html">PÁGINA INICIAL</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./sobre.html">SOBRE</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./projeto.html">PROJETOS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./contato.html">CONTATO</a>
+                </li>
+              </ul>
             </div>
-          </nav>
+            <div class="redes-sociais">
+              <a href="https://www.facebook.com/a.souzaeletrica" target="_blank"><img src="imagens/facebook.png" alt="Facebook" title="Facebook" class="IconRedeSocial"></a>
+              <a href="https://www.instagram.com/a.souzaeletrica/" target="_blank"><img src="imagens/instagram.png" alt="Instagram" title="Instagram" class="IconRedeSocial"></a>
+              <a href="https://wa.me/5511947781974?text=Olá!%20vim%20pelo%20site" target="_blank"><img src="imagens/whatsapp.png" alt="whatsapp" title="Whatsapp" class="IconRedeSocial"></a>
+              <a href="mailto:alexandredesouzabarboza@gmail.com" target="_blank"><img src="imagens/email.png" alt="email" title="Email" class="IconRedeSocial"></a>
+            </div>
+          </div>
+        </nav>
       </header>
-    <div class="conteudo">
-      <div class="row">
-        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-          <blockquote class="instagram-media hidden" data-instgrm-permalink="https://www.instagram.com/a.souzaeletrica/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; padding:0; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-              <div style="padding:0;"> 
-                  <div style="padding-top: 56.25%;"></div> 
-                  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"> 
-                      <iframe src="//www.instagram.com/p/C4B9BGtJk82/embed/" frameborder="0" scrolling="no" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:none; overflow:hidden;" allowfullscreen></iframe> 
-                  </div>
+      <div class="conteudo">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+            <div class="loading spinner-border spinner-border-lg m-5" role="status">
+              <span class="visually-hidden">Carregando...</span>
+            </div>
+            <blockquote class="instagram-media hidden" data-instgrm-permalink="https://www.instagram.com/a.souzaeletrica/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; padding:0; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+              <div style="padding:0;">
+                <div style="padding-top: 56.25%;"></div>
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                  <iframe src="//www.instagram.com/p/C4B9BGtJk82/embed/" frameborder="0" scrolling="no" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:none; overflow:hidden;" allowfullscreen></iframe>
+                </div>
               </div>
-          </blockquote> 
-          <script async src="//www.instagram.com/embed.js"></script>
+            </blockquote>
+            <script async src="//www.instagram.com/embed.js"></script>
+          </div>
+        </div>
       </div>
-      
-      </div>
-      
+      <footer>
+        <p class="footer">&copy; <span id="ano"></span> A.Souza Elétrica - Todos os direitos reservados.</p>
+      </footer>
     </div>
-    <footer>
-      <p class="footer">&copy; <span id="ano"></span> A.Souza Elétrica - Todos os direitos reservados.</p>
-    </footer>
-  </div>
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R0TPN7LR3Q"></script>
-  
-  <script>
-    let anoAtual = new Date().getFullYear();
-    document.querySelector('#ano').textContent = anoAtual;
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R0TPN7LR3Q"></script>
 
-    function showBlockquote() {
-      document.querySelector('.instagram-media').classList.remove('hidden');
-    }
+    <script>
+      window.addEventListener('load', () => {
+        const blockquote = document.querySelector('.instagram-media');
+        blockquote.classList.remove('hidden');
 
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-R0TPN7LR3Q');
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        const loading = document.querySelector('.loading');
+        loading.classList.add('hidden');
+      });
 
-</body>
+      let anoAtual = new Date().getFullYear();
+      document.querySelector('#ano').textContent = anoAtual;
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-R0TPN7LR3Q');
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </body>
 </html>
